@@ -14,13 +14,23 @@ import java.util.List;
  * @author Chad Werning
  */
 public class Product {
-    
+
     private String id;
     private String productName;
+    private String productDescription;
 
-    public Product(String id, String productName) {
+    public Product(String id, String productName, String productDescription) {
         this.id = id;
         this.productName = productName;
+        this.productDescription = productDescription;
+    }
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
     }
 
     public String getId() {
@@ -38,7 +48,5 @@ public class Product {
     public void setProductName(String productName) {
         this.productName = productName;
     }
-    
-   
-    
+
 }
