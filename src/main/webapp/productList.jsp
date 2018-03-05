@@ -26,6 +26,7 @@
     <body>
         <ul>
             <li><a class="active" href="index.jsp">Home</a></li>
+            <li><a class="default" href="cart.jsp">Cart</a></li>
             
         </ul>
         <br><br>
@@ -34,8 +35,9 @@
             <tr>
          
                  <td>
-                    <a href="?id=<c:out value="${productList.id}"/>">
-                        <c:out value="${productList.productName}"/>
+                    <a title="${productList.productName}" href="?id=<c:out value="${productList.id}"/>">
+                        <img border="0" src="images/${productList.id}.jpg" width="100" height="100">
+                        <!--<c:out value="${productList.productName}"/>-->
                     </a>
                 </td>
              </tr>

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : productDetail
-    Created on : Feb 12, 2018, 9:47:26 PM
-    Author     : Chad Werning
+    Document   : cart
+    Created on : Feb 27, 2018, 1:19:54 PM
+    Author     : wernc
 --%>
 
 <%@page import="edu.wctc.cw.week4.model.Product"%>
@@ -23,8 +23,8 @@
     <header><h1>Aliquam pretium quam nec mi rhoncus, sed laoreet nibh sollicitudin.</h1></header>
     <body>
         <ul>
-            <li><a class="active" href="index.jsp">Home</a></li>
-            <li><a class="default" href="cart.jsp">Cart</a></li>
+            <li><a class="default" href="index.jsp">Home</a></li>
+            <li><a class="active" href="cart.jsp">Cart</a></li>
         </ul>
         <br><br>
         
@@ -39,3 +39,4 @@
         </table>
     </body>
 </html>
+
