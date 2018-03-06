@@ -16,25 +16,49 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
-        
+
         <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
         <script src='StorefrontJS.js' type='text/javascript'></script>
     </head>
-    <header><h1>Aliquam pretium quam nec mi rhoncus, sed laoreet nibh sollicitudin.</h1></header>
+    <header>
+        <a href="CartController">
+            <img src="images/cart.png" title="Your Cart" height="50px">
+        </a>
+
+    </header>
     <body>
+        <br><br>
         <ul>
-            <li><a class="default" href="index.jsp">Home</a></li>
-            <li><a class="active" href="cart.jsp">Cart</a></li>
+            <li><a class="active" href="index.jsp">Home</a></li>
         </ul>
         <br><br>
-        
-        <table>
-            <tr>
-                <td>Product:</td>
-                <td><c:out value="${product.productName}"></c:out></td>
-                <td><c:out value="${product.productDescription}"></c:out></td>
-                </tr>
 
+        <table>
+
+            <c:forEach var="cartList" items="${cartList}">
+                <tr>
+
+                    <td>
+                        <a title="${cartList.productName}">
+
+                            <c:out value="${cartList.productName}"/>
+                     
+                        </a>
+                    </td>
+                </tr>
+            </c:forEach>
+                
+            <!--will not work
+
+            <c:forEach var="quantityList" items="${quantityList}">
+                <tr>
+                    <td>
+                        <c:out value="${quantityList.intValue()}"/>
+                    </td>
+                </tr>
+            </c:forEach>
+            
+            -->
 
         </table>
     </body>

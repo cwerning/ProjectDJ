@@ -5,6 +5,7 @@
  */
 package edu.wctc.cw.week4.controller;
 
+import edu.wctc.cw.week4.model.Cart;
 import edu.wctc.cw.week4.model.Product;
 import edu.wctc.cw.week4.model.ProductService;
 import java.io.IOException;
@@ -63,12 +64,15 @@ public class CartController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //          
-        ProductService productService = new ProductService();
+        Cart cart = new Cart();
 
         RequestDispatcher dispatcher = null;
 
-        List<Product> productList = productService.getAllProducts();
-        request.setAttribute("productList", productList);
+        List<Product> cartList = cart.getAllProducts();
+        List<Integer> quantityList = cart.getQuantityForProducts();
+        
+        request.setAttribute("quantityList", quantityList);
+        request.setAttribute("cartList", cartList);
         dispatcher = request.getRequestDispatcher("/cart.jsp");
 
         dispatcher.forward(request, response);
@@ -85,7 +89,10 @@ public class CartController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
+        RequestDispatcher dispatcher = null;
+
+        dispatcher.forward(request, response);
     }
 
     /**

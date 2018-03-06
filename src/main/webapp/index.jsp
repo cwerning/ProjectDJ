@@ -13,14 +13,13 @@
         <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
     </head>
     <header>
-        <h1>
-            <form method="get" action="CartController" />
-            <input type="text" name="search" />
-            <input type="submit" value="Search" />
-            </form>
-        </h1>
+        <a href="CartController">
+            <img src="images/cart.png" title="Your Cart" height="50px">
+        </a>
+        
     </header>
     <body>
+        <br><br>
         <ul>
             <li><a class="active" href="index.jsp">Home</a></li>
 
@@ -28,8 +27,8 @@
         <br><br>
         <h1>Search!</h1>
         <form method="get" action="ProductController" />
-        <input type="text" name="search" />
-        <input type="submit" value="Search" />
-    </form>
+            <input type="text" name="search" />
+            <input type="submit" value="Search" />
+        </form>
 </body>
 </html>

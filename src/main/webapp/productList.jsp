@@ -16,36 +16,53 @@
         <title>Storefront Home</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
-       
+
         <!-- <style>#slider { margin: 10px; }	</style> -->
-   
+ 
+
     </head>
 
-    <header><h1>Aliquam pretium quam nec mi rhoncus, sed laoreet nibh sollicitudin.</h1></header>
-    
+    <header>
+        <a href="CartController">
+            <img src="images/cart.png" title="Your Cart" height="50px">
+        </a>
+
+    </header>
+
     <body>
+        <br><br>
         <ul>
             <li><a class="active" href="index.jsp">Home</a></li>
-            <li><a class="default" href="cart.jsp">Cart</a></li>
-            
+
+
         </ul>
         <br><br>
+
         <table>
+
+
             <c:forEach var="productList" items="${productList}">
-            <tr>
-         
-                 <td>
-                    <a title="${productList.productName}" href="?id=<c:out value="${productList.id}"/>">
-                        <img border="0" src="images/${productList.id}.jpg" width="100" height="100">
-                        <!--<c:out value="${productList.productName}"/>-->
-                    </a>
-                </td>
-             </tr>
+                <tr>
+
+                    <td>
+                        <a title="${productList.productName}" href="?id=<c:out value="${productList.id}"/>">
+                            <img border="0" src="images/${productList.id}.jpg" width="100" height="100">
+
+                        </a>
+                        <span>
+                            <input class="addButtons" type="submit" value="Add To Cart" id="${productlist.id}" />
+                        </span>
+                    </td>
+                </tr>
             </c:forEach>
+
+
         </table>
 
 
     </body>
+
+
 
 
 </html>

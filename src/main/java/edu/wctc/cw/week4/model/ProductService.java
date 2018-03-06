@@ -14,6 +14,8 @@ import java.util.List;
  * @author Chad Werning
  */
 public class ProductService {
+    
+    
 
     private final List<Product> productList = Arrays.asList(
            new Product("101", "Zipper", "This device that brings together two pieces of fabric "
@@ -46,6 +48,8 @@ public class ProductService {
            new Product("119", "Kool-Aid", "A brand of flavored drink mix owned by Kraft Foods Company.")
       
     );
+    
+ 
 
     public Product getProduct(String id) {
         Product ret = null;
