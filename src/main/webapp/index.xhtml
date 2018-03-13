@@ -8,18 +8,25 @@
         <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
     </h:head>
     <header>
-       
-            
-       <h:link outcome="#{cartBean.cart()}" >
-    <h:graphicImage value="images/cart.png" style="border: none" />
-    </h:link>
-        
+        <h:link outcome="#{cartBean.cart()}" >
+            <h:graphicImage value="images/cart.png" width="80px" height="80px" style="border: none" />
+        </h:link>
+        <span>Your Cart</span><br/><br/>
     </header>
     <h:body>
+        <ul>
+            <li><a class="active" href="index.xhtml">Home</a></li>
+            <li>
+                <h:link outcome="#{productBean.allProducts()}" value="Products" />
+            </li>
+        </ul>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat tempor massa vitae pulvinar. Nam ac gravida enim, ac blandit sapien. Ut porta lectus et lacus efficitur, non sodales orci tempus. Maecenas in tellus ultrices, volutpat elit in, convallis est. Aenean leo ante, interdum sed rutrum vitae, scelerisque id enim. Pellentesque eget pulvinar velit, sit amet facilisis metus. Ut at dignissim elit, ac mattis metus. Nulla condimentum dictum tortor sit amet lobortis. Praesent sit amet volutpat mauris, vel eleifend sapien. Aliquam tincidunt aliquam tincidunt. Praesent vel sapien ut lacus elementum ornare. Integer luctus dolor eget purus tristique, eget lacinia quam dapibus.
 
-        <br />
-        <h1>Search Products</h1>
-        <h:link outcome="#{productBean.allProducts()}" value="Products" />
+Nullam ac gravida eros. Pellentesque semper arcu id nibh blandit, ac cursus magna ornare. Nam neque turpis, eleifend nec bibendum eu, faucibus ac turpis. Duis tincidunt porttitor odio non scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam eleifend nunc dolor. Suspendisse tincidunt, dui eu imperdiet aliquam, turpis tellus tristique nulla, semper ultrices sapien risus sed enim. Donec vitae aliquam nibh, nec consectetur ex. Cras in nisi ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac rutrum ligula. In in leo dolor. Nam non dapibus dui, et vestibulum sapien. Curabitur malesuada varius est, a faucibus nulla aliquam quis. Curabitur porta consectetur sem. Etiam et enim imperdiet mi finibus ornare nec non felis.</p>
+
+
+
     </h:body>
 </html>
 

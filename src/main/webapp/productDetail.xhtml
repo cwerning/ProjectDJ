@@ -12,6 +12,23 @@ and open the template in the editor.
         <title>Product Detail</title>
         <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
     </h:head>
+    
+    <header>
+        <h:link outcome="#{cartBean.cart()}" >
+            <h:graphicImage value="images/cart.png" width="80px" height="80px" style="border: none" />
+        </h:link>
+        <span>Your Cart</span><br/><br/>
+    </header>
+    <h:body>
+ 
+        <ul>
+            <li><a class="default" href="index.xhtml">Home</a></li>
+            <li>
+                <h:link outcome="#{productBean.allProducts()}" value="Products" />
+            </li>
+        </ul>
+        <br/>
+     
     <p:panelGrid columns="3">
         <h:outputLabel value="Product:" />
         <h:outputText value="#{productBean.product.productName}"/>
@@ -20,4 +37,6 @@ and open the template in the editor.
         <h:outputText value="#{productBean.product.productDescription}"/>
         
     </p:panelGrid>
+        
+    </h:body>
 </html>
