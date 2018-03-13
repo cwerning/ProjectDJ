@@ -5,10 +5,20 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Products Main Page</title>
+        <link rel='stylesheet' type='text/css' href='css/SiteCSS.css' />
     </h:head>
+    <header>
+       
+            
+       <h:link outcome="#{cartBean.cart()}" >
+    <h:graphicImage value="images/cart.png" style="border: none" />
+    </h:link>
+        
+    </header>
     <h:body>
-        Hello from Facelets
+
         <br />
+        <h1>Search Products</h1>
         <h:link outcome="#{productBean.allProducts()}" value="Products" />
     </h:body>
 </html>
